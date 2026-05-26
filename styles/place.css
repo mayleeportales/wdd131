@@ -1,0 +1,134 @@
+/* === Global Variables ===*/
+:root {
+    --primary-color: #044d77;
+    --sand-color: #f5e6ca;
+    --text-color: #2b2b2b;
+    --white: #fff;
+    --heading-font: 'Georgia', serif;
+    --body-font: 'Helvetica', 'Arial', sans-serif;
+}
+
+/* === Basic Reset === */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--text-color);
+    background-color: var(--white);
+    line-height: 1.6;
+}
+
+h1, h2 {
+    font-family: var(--heading-font);
+}
+
+/* === Header === */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    border-bottom: 8px solid var(--sand-color);
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+header .tagline {
+    font-style: italic;
+    color: var(--white);
+}
+
+/* === Hero ===*/
+.hero {
+    width: 100%;
+    text-align: center;
+    margin: 1.5rem 0;
+    padding: 0 1rem;
+}
+
+.hero img {
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* === Data Section === */
+.data {
+    background-color: var(--sand-color);
+    padding: 1.5rem 1rem;
+    margin: 1rem;
+    border-radius: 8px;
+}
+
+.data h2 {
+    color: var(--text-color);
+    border-bottom: 2px solid var(--text-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.data ul {
+    list-style: none;
+}
+
+.data li {
+    padding: 0.4rem 0;
+    border-bottom: 1px dashed #000;
+}
+
+.data li:last-child {
+    border-bottom: none;
+}
+
+/* === Weather Section === */
+.weather {
+    background-color: var(--sand-color);
+    padding: 1.5rem 1rem;
+    margin: 1rem;
+    border-radius: 8px;
+}
+
+.weather h2 {
+    color: var(--text-color);
+    border-bottom: 2px solid var(--text-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.weather ul {
+    list-style: none;
+}
+
+.weather li {
+    padding: 0.4rem 0;
+    border-bottom: 1px dashed #000;
+}
+
+/* === SVG icon ===*/
+.weather-icon-mobile {
+    width: 80px;
+    height: 80px;
+    display: block;
+    background-color: var(white);
+    border-radius: 50%;
+    padding: 8px;
+}
+
+/* === Footer ===  */
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    padding: 1.5rem 1rem;
+}

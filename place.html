@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover the Maldives - a tropical paradise of turquoise waters, coral reefs, and white-sand beaches in the Indian Ocean.">
+    <meta name="author" content="Maylee Portales Picazo">
+    <title>Maldives - Country Page | WDD 131</title>
+    <link rel="stylesheet" href="styles/place.css">
+
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Maldives</h1>
+        <p class="tagline">Pearls of the Indian Ocean</p>
+    </header>
+
+    <main>
+        <section class="hero">
+            <picture>
+                <source media="(min-width: 1000px)" srcset="images/hero-large.webp">
+                <source media="(min-width: 600px)" srcset="images/hero-medium.webp">
+                <img src="images/hero-small.webp" alt="Aerial view of Maldives islands surrounded by turquoise water">
+            </picture>
+        </section>
+
+        <section class="data">
+            <h2>Data</h2>
+
+            <ul>
+                <li><strong>Capital: </strong>Malé</li>
+                <li><strong>Population: </strong>~521,000</li>
+                <li><strong>Language: </strong>Dhivehi</li>
+                <li><strong>Currency: </strong>Maldivian Rufiyaa (MVR)</li>
+                <li><strong>Area: </strong>298 km²</li>
+            </ul>
+        </section>
+
+        <section class="weather">
+            <h2>Weather</h2>
+
+            <img class="weather-icon-mobile" src="images/weather-icon.svg" alt="Partly cloud weather icon">
+
+            <ul>
+                <li><strong>Condition: </strong>Partly Cloudy</li>
+                <li><strong>Temperature: </strong>29 °C</li>
+                <li><strong>Wind: </strong>12 km/h</li>
+                <li><strong>Wind Chill: </strong><span id="windchill"></span></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span>🌻 Maylee Picazo - Maldives, WDD 131</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
