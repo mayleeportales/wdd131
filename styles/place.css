@@ -81,7 +81,7 @@ header .tagline {
 
 .data li {
     padding: 0.4rem 0;
-    border-bottom: 1px dashed #000;
+    border-bottom: 1px dashed var(--text-color);
 }
 
 .data li:last-child {
@@ -109,7 +109,7 @@ header .tagline {
 
 .weather li {
     padding: 0.4rem 0;
-    border-bottom: 1px dashed #000;
+    border-bottom: 1px dashed var(--text-color);
 }
 
 /* === SVG icon ===*/
@@ -117,7 +117,7 @@ header .tagline {
     width: 80px;
     height: 80px;
     display: block;
-    background-color: var(white);
+    background-color: var(--white);
     border-radius: 50%;
     padding: 8px;
 }
@@ -131,4 +131,33 @@ footer {
     margin-top: 2rem;
     font-size: 0.9rem;
     padding: 1.5rem 1rem;
+}
+
+/* === Media Query Desktop === */
+@media (min-width: 700px) {
+    main {
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+
+   .content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+   }
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+    .weather-icon-mobile {
+        display: none;
+    }
+
+    .weather h2::after {
+        content: "⛅ ";
+        font-size: 1.5rem;
+        margin-right: 0.5rem;
+    }
 }
