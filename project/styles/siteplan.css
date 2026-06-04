@@ -1,0 +1,149 @@
+:root {
+  --teal: #1f6f78;
+  --mint: #5bbf9e;
+  --mint-dark: #157a5e;
+  --mint-light: #d6f3e8;
+  --light: #f4f7f6;
+  --dark: #2b2b2b;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Opens Sans", sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+h1, h2 {
+    font-family: "Poppins", sans-serif;
+}
+
+header {
+    background-color: var(--teal);
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.subtitle {
+    margin: 0.25rem 0 0;
+    color: var(--mint);
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+section {
+    background-color: #fff;
+    border-left: 6px solid var(--mint);
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+section h2 {
+    color: var(--teal);
+    border-bottom: 2px solid var(--light);
+    padding-bottom: 0.3rem;
+}
+
+.domain {
+    font-style: italic;
+    color: var(--teal);
+}
+
+/* === Wireframes === */
+.wireframe-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.wf figcaption {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: var(--teal);
+}
+
+.frame {
+    border: 2px solid var(--teal);
+    background-color: var(--light);
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.frame-mobile {
+    width: 200px;
+}
+
+.frame-desktop {
+    width: 380px;
+}
+
+.wf-header,
+.wf-hero,
+.wf-block,
+.wf-col,
+.wf-footer {
+  background-color: #ffffff;
+  border: 1px dashed var(--mint);
+  text-align: center;
+  padding: 0.6rem 0.3rem;
+  font-size: 0.85rem;
+}
+
+.wf-header.wide {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wf-hero {
+    background-color: var(--mint-dark);
+    color: #fff;
+    padding: 1.2rem 0.3rem;
+}
+
+.wf-columns {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.wf-col {
+    flex: 1;
+}
+
+.wf-footer {
+    background-color: var(--teal);
+    color: #fff;
+}
+
+footer {
+    background: var(--teal);
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: var(--mint-light);
+}
