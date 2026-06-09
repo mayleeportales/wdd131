@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Product review form to rate and review products.">
+    <meta name="author" content="Maylee Portales Picazo">
+    <title>Product Review Form</title>
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <main>
+        <form action="review.html" method="get" class="review-form">
+
+            <label for="product-name">Product Name <span class="required">*</span></label>
+            <select name="product-name" id="product-name" required>
+                <option value="" disabled selected>Select a Product</option>
+            </select>
+
+            <fieldset class="rating">
+                <legend>Overall Rating <span class="required">*</span></legend>
+                <span class="rating-stars">
+                    <input type="radio" name="rating" id="rating1" value="1" required>
+                    <label for="rating1" title="1 star">&#9733;</label>
+
+                    <input type="radio" name="rating" id="rating2" value="2">
+                    <label for="rating2" title="2 stars">&#9733;</label>
+
+                    <input type="radio" name="rating" id="rating3" value="3">
+                    <label for="rating3" title="3 stars">&#9733;</label>
+
+                    <input type="radio" name="rating" id="rating4" value="4">
+                    <label for="rating4" title="4 stars">&#9733;</label>
+
+                    <input type="radio" name="rating" id="rating5" value="5">
+                    <label for="rating5" title="5 stars">&#9733;</label>
+                </span>
+            </fieldset>
+
+            <label for="install-date">Date of Installation <span class="required">*</span></label>
+            <input type="date" name="install-date" id="install-date" required>
+
+            <fieldset class="features">
+                <legend>Useful Features</legend>
+
+                <div class="checkbox-row">
+                    <input type="checkbox" name="features" id="features-durability" value="Durability">
+                    <label for="features-durability">Durability</label>
+                </div>
+
+                <div class="checkbox-row">
+                    <input type="checkbox" name="features" id="feature-ease" value="Ease of Use">
+                    <label for="feature-ease">Ease of Use</label>
+                </div>
+
+                <div class="checkbox-row">
+                    <input type="checkbox" name="features" id="feature-price" value="Price">
+                    <label for="feature-price">Price</label>
+                </div>
+
+                <div class="checkbox-row">
+                    <input type="checkbox" name="features" id="feature-design" value="Design">
+                    <label for="feature-design">Design</label>
+                </div>
+
+                <div class="checkbox-row">
+                    <input type="checkbox" name="features" id="feature-performance" value="Performance">
+                    <label for="feature-performance">Performance</label>
+                </div>
+            </fieldset>
+
+            <label for="review-text">Write a Review About the Product</label>
+            <textarea name="review-text" id="review-text" rows="5"></textarea>
+
+            <label for="user-name">User Name</label>
+            <input type="text" name="user-name" id="user-name">
+
+            <input type="submit" value="Submit Review" class="submit-btn">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span>🌻 Maylee Portales Picazo 🌻 WDD 131</p>
+        <p id="last-modified"></p>
+    </footer>
+</body>
+</html>
