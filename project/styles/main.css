@@ -1,0 +1,398 @@
+/* Site Colors */
+:root {
+  --teal: #1f6f78;
+  --mint: #5bbf9e;
+  --mint-dark: #157a5e;
+  --mint-light: #d6f3e8;
+  --light: #f4f7f6;
+  --white: #fff;
+  --dark: #2b2b2b;
+  --red: #b00020;
+  --hover: #ffd24d;
+
+  /* Fonts */
+  --heading-font: "Poppins", sans-serif;
+  --body-font: "Open Sans", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--dark);
+    background-color: var(--light);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3 {
+    font-family: var(--heading-font);
+    color: var(--teal);
+}
+
+header {
+    background-color: var(--teal);
+    color: var(--white);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+    flex: 1 0 auto;
+}
+
+main section {
+    margin-bottom: 2.5rem;
+}
+
+main h2 {
+    margin-bottom: 0.75rem;
+}
+
+main p {
+    margin-bottom: 0.75rem;
+}
+
+/* ==== Home Page ==== */
+
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 3rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 2.5rem;
+    overflow: hidden;
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.35);
+    z-index: 0;
+}
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.hero-content h1 {
+    display: inline-block;
+    background-color: var(--mint);
+    color: var(--dark);
+    padding: 0.5rem 1.25rem;
+    border-radius: 8px;
+}
+
+.hero-content p {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.85);
+    color: var(--dark);
+    padding: 0.35rem 0.9rem;
+    border-radius: 6px;
+}
+
+.card-list {
+    list-style: none;
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.card-list li {
+    background-color: var(--white);
+    padding: 1.25rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--mint);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.card-list li strong {
+    color: var(--teal);
+}
+
+.logo {
+    font-family: var(--heading-font);
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+#menu-button {
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Menu hidden on mobile */
+nav {
+    width: 100%;
+}
+
+#nav-menu {
+    list-style: none;
+    display: none;
+}
+
+#nav-menu.open {
+    display: block;
+}
+
+#nav-menu a {
+    display: block;
+    color: var(--white);
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    border-top: 1px solid var(--mint-dark);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#nav-menu a:hover,
+#nav-menu a:focus {
+    background-color: var(--white);
+    color: var(--teal);
+    border-radius: 8px;
+}
+
+footer {
+    background-color: var(--teal);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: var(--mint-light);
+    text-decoration: none;
+}
+
+footer a:hover, 
+footer a:focus {
+    text-decoration: underline;
+}
+
+/* Quiz questions */
+.question-card {
+    background-color: var(--white);
+    border: none;
+    border-radius: 8px;
+    border-left: 4px solid var(--mint);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.question-card legend {
+    font-family: var(--heading-font);
+    font-weight: 600;
+    color: var(--teal);
+    padding: 0 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.option {
+    display: block;
+    padding: 0.6rem 0.75rem;
+    margin-top: 0.5rem;
+    border: 1px solid var(--mint-light);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2 ease;
+}
+
+.option:hover {
+    background-color: var(--mint-light);
+}
+
+.option input {
+    margin-right: 0.5rem;
+}
+
+button#result-button {
+    font-family: var(--heading-font);
+    background-color: var(--mint);
+    color: var(--white);
+    border: none;
+    border-radius: 6px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button#result-button:hover {
+    background-color: var(--mint-dark);
+}
+
+/* Result card */
+.result-card {
+    background-color: var(--mint-light);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.warning {
+    color: var(--red);
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+/* === tracker page styles === */
+
+/* Forms: stack labels and inputs vertically for ease mobile use */
+#task-form, 
+#feedback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Labels: smalls, bold, easy to read */
+#task-form label,
+#feedback-form label {
+    font-weight: 600;
+    font-family: var(--heading-font);
+}
+
+/* Text inputs, the select and textarea share the same look */
+#task-form input,
+#task-form select,
+#feedback-form input,
+#feedback-form textarea {
+    padding: 0.6rem 0.75rem;
+    border: 1px solid var(--mint-light);
+    border-radius: 6px;
+    font-family: var(--body-font);
+    font-size: 1rem;
+}
+
+/* Clear focus outline for accessibility */
+#task-form input:focus, 
+#task-form select:focus,
+#feedback-form input:focus,
+#feedback-form textarea:focus {
+    outline: 2px solid var(--mint);
+}
+
+/* Reusable button style */
+.primary-btn {
+    align-self: flex-start;
+    font-family: var(--heading-font);
+    background-color: var(--mint);
+    color: var(--white);
+    border: none;
+    border-radius: 6px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.primary-btn:hover,
+.primary-btn:focus {
+    background-color: var(--mint-dark);
+}
+
+/* Progress text (e.g. "2 of 5 tasks done ")*/
+.progress {
+    font-weight: 600;
+    color: var(--teal);
+    margin: 0.5rem 0 1rem;
+}
+
+/* Task list: remove default bullets and spacing*/
+.task-list {
+    list-style: none;
+}
+
+/* Each task row: name on the left, buttons on the right */
+.task-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    background-color: var(--white);
+    border: 1px solid var(--mint-light);
+    border-radius: 6px;
+    padding: 0.6rem 0.75rem;
+    margin-top: 0.5rem;
+}
+
+/* When a task is done, fade it and cross it out */
+.task-item.done .task-text {
+    text-decoration: line-through;
+    color: var(--mint-dark);
+    opacity: 0.7;
+}
+
+/* The subject "tag" shown next to each task */
+.task-subject {
+    font-size: 0.85rem;
+    background-color: var(--mint-light);
+    color: var(--teal);
+    padding: 0.15rem 0.5rem;
+    border-radius: 100px;
+    margin-left: 0.5rem;
+}
+
+.task-btn.remove {
+    color: var(--red);
+}
+
+/* The thank-you message after sending feedback*/
+.feedback-message {
+    font-weight: 600;
+    color: var(--mint-dark);
+}
+
+@media (min-width: 700px) {
+    #menu-button {
+        display: none;
+    }
+
+    nav {
+        width: auto;
+    }
+
+    #nav-menu {
+        display: flex;
+        gap: 1rem;
+    }
+}
+

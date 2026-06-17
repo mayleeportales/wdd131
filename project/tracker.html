@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Track your study tasks and send feedback. FocusFirst saves your progress in your browser so nothing is lost.">
+    <meta name="author" content="Maylee Portales Picazo">
+    <title>FocusFirst | Tracker</title>
+    <link rel="stylesheet" href="styles/main.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+    <script src="scripts/tracker.js" defer></script>
+</head>
+<body>
+    <header>
+        <!-- Logo and navigation -->
+         <p class="logo">FocusFirst</p>
+
+         <button id="menu-button" aria-label="Open menu">&#9776;</button>
+        <nav>
+            <!-- Menu links -->
+             <ul id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="tracker.html">Tracker</a></li>
+             </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Study Tools</h1>
+        <!-- Section 1: Study Task Tracker -->
+         <section>
+            <h2>My Study Tasks 📚</h2>
+            <p>Add your studies tasks below. They are saved in your browser, so they 
+                will still be here when you come back.
+            </p>
+
+            <!-- Form to add a new task -->
+             <form id="task-form">
+                <!-- label + input for the task name -->
+                 <label for="task-name">Task</label>
+                 <input type="text" id="task-name" name="task-name" placeholder="e.g. Read chapter 4" required>
+
+                 <!-- Label + select for the subject -->
+                  <label for="task-subject">Subject</label>
+                  <select name="task-subject" id="task-subject" required>
+                        <option value="">Choose a subject</option>
+                        <option value="Math">Math</option>
+                        <option value="Science">Science</option>
+                        <option value="History">History</option>
+                        <option value="Language">Language</option>
+                        <option value="Other">Other</option>
+                  </select>
+
+                  <!-- Submit button adds the task -->
+                   <button type="submit" class="primary-btn">Add Task</button>
+             </form>
+
+             <!-- Progress message, filled in by JavaScript -->
+              <p id="progress" class="progress"></p>
+
+              <!-- The task list. JavaScript injects <li> items here -->
+                <ul id="task-list" class="task-list"></ul>
+         </section>
+
+         <!-- Section 2: Feedback Form -->
+          <section>
+            <h2>Share Your Feedback 💬</h2>
+            <p>Struggling with focus or have a study tip to share? Send us a message.</p>
+
+            <!-- Submits to a results page-->
+             <form id="feedback-form">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+
+                <label for="message">Your message</label>
+                <textarea name="message" id="message" rows="4" required></textarea>
+
+                <button type="submit" class="primary-btn">Send Feedback</button>
+             </form>
+             
+             <!-- Thank you message filled by JS -->
+             <p id="feedback-message" class="feedback-message"></p>
+          </section>
+    </main>
+
+    <footer>
+        <p>&copy;2026 FocusFirst | Maylee Portales Picazo</p>
+        <p><a href="references.html">References</a></p>
+    </footer>
+</body>
+</html>
