@@ -402,6 +402,10 @@ button#result-button:hover {
     font-weight: bold;
 }
 
+.task-btn.toggle {
+    font-weight: bold;
+}
+
 /* The thank-you message after sending feedback*/
 .feedback-message {
     font-weight: 600;
