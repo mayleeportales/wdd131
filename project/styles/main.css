@@ -403,7 +403,7 @@ button#result-button:hover {
 }
 
 .task-btn.toggle {
-    font-weight: bold;
+    -webkit-text-stroke: 1.5px var(--dark);
 }
 
 /* The thank-you message after sending feedback*/
