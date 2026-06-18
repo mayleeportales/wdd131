@@ -49,7 +49,7 @@ function renderTasks() {
                 </span>
                 <span>
                     <button class="task-btn toggle" data-index="${index}" aria-label="Mark task done">${checkIcon}</button>
-                    <button class="task-btn remove" data-index="${index}" aria-label="Remove task">🗑️</button>
+                    <button class="task-btn remove" data-index="${index}" aria-label="Remove task">✖</button>
                 </span>
             </li>`;
         })
